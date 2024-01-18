@@ -1,0 +1,188 @@
+<html xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vim2="urn:vim2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="./commonRes.js" language="JavaScript"></script>
+<link href="doc-style.css" type="text/css" rel="StyleSheet">
+</head>
+<script src="dynamic-content.js" type="text/javascript"></script>
+<body>
+<table cellspacing="0" class="header-footer" id="top">
+<tr>
+<td>
+<br>
+</td><td></td><td><a href="#field_detail">Local Properties</a></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<a id="vim.host.DateTimeConfig" name="vim.host.DateTimeConfig"></a>
+<h1>Data Object - HostDateTimeConfig(vim.host.DateTimeConfig)</h1>
+<dl>
+<dt>Property of</dt>
+<dd>
+<a href="vim.ClusterComputeResource.HostConfigurationProfile.html#field_detail">ClusterComputeResourceHostConfigurationProfile</a>, <a href="vim.host.ConfigSpec.html#field_detail">HostConfigSpec</a>
+</dd>
+<dt>Parameter to</dt>
+<dd>
+<a href="vim.host.DateTimeSystem.html#updateConfig">UpdateDateTimeConfig</a>
+</dd>
+<dt>Extends</dt>
+<dd>
+<a href="vmodl.DynamicData.html">DynamicData</a>
+</dd>
+<dt>See also</dt>
+<dd>
+<a href="vim.host.NtpConfig.html">HostNtpConfig</a>, <a href="vim.host.PtpConfig.html">HostPtpConfig</a>
+</dd>
+<dt>Since </dt>
+<dd>VI API 2.5</dd>
+<p></p>
+</dl>
+<H2>Data Object 
+                  Description</H2>
+<p></p>
+<p></p>
+         This data object represents the dateTime configuration of the host.
+      <p></p>
+<a id="field_detail" name="field_detail"></a>
+<p class="table-title">Properties</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Name
+	        </th><th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="disableEvents" name="disableEvents"></a><strong>disableEvents</strong><span title="Need not be set" class="footnote-ref">*</span></td><td>xsd:boolean</td><td>
+<p></p>
+<p></p>
+         When Network Time service or Precision Time service are enabled
+  any detecteced failures will result in Events being sent to
+  Virtual Center. Use this setting to disable Time Events.
+      <p></p>
+<B><I>Since </I></B>vSphere API 7.0.3.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="disableFallback" name="disableFallback"></a><strong>disableFallback</strong><span title="Need not be set" class="footnote-ref">*</span></td><td>xsd:boolean</td><td>
+<p></p>
+<p></p>
+         When in PrecisionTimeSync, NTP configuration as set will be
+  running as backup. Use this setting to prevent NTP from becoming
+  the primary time protocol in the event of a PTP service failure.
+      <p></p>
+<B><I>Since </I></B>vSphere API 7.0.3.0<br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="enabled" name="enabled"></a><strong>enabled</strong><span title="Need not be set" class="footnote-ref">*</span></td><td>xsd:boolean</td><td>
+<p></p>
+<p></p>
+         Bring Time services subsystem up or down.
+      <p></p>
+<B><I>Since </I></B>vSphere API 7.0.3.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="ntpConfig" name="ntpConfig"></a><strong>ntpConfig</strong><span title="Need not be set" class="footnote-ref">*</span></td><td><a href="vim.host.NtpConfig.html">HostNtpConfig</a></td><td>
+<p></p>
+<p></p>
+         The NTP configuration on the host.
+      <br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="protocol" name="protocol"></a><strong>protocol</strong><span title="Need not be set" class="footnote-ref">*</span></td><td>xsd:string</td><td>
+<p></p>
+<p></p>
+         Specify which network time configuration to discipline vmkernel clock.
+  See <a href="vim.host.DateTimeInfo.Protocol.html">HostDateTimeInfoProtocol</a> for supported values.
+      <p></p>
+<B><I>Since </I></B>vSphere API 7.0.3.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="ptpConfig" name="ptpConfig"></a><strong>ptpConfig</strong><span title="Need not be set" class="footnote-ref">*</span></td><td><a href="vim.host.PtpConfig.html">HostPtpConfig</a></td><td>
+<p></p>
+<p></p>
+         The PTP configuration on the host.
+      <p></p>
+<B><I>Since </I></B>vSphere API 7.0.3.0<br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="resetToFactoryDefaults" name="resetToFactoryDefaults"></a><strong>resetToFactoryDefaults</strong><span title="Need not be set" class="footnote-ref">*</span></td><td>xsd:boolean</td><td>
+<p></p>
+<p></p>
+         When this property is present and set true the existing
+  configuration for Time Services will be reset to factory default.
+  The protocol property when set defines the scope of what is reset.
+  If additional configuration beyond protocol is provided host
+  will first perform factory reset followed by applying any configuration
+  present.
+      <p></p>
+<B><I>Since </I></B>vSphere API 7.0.3.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="timeZone" name="timeZone"></a><strong>timeZone</strong><span title="Need not be set" class="footnote-ref">*</span></td><td>xsd:string</td><td>
+<p></p>
+<p></p>
+         The time zone of the host.
+  Must be one of the values of
+  <a href="vim.host.DateTimeSystem.TimeZone.html#key">key</a>
+      <br>
+</td>
+</tr>
+<tr class="r1">
+<td colspan="3">
+						Properties inherited from <a href="vmodl.DynamicData.html">DynamicData</a></td>
+</tr>
+<tr class="r0">
+<td colspan="3">None</td>
+</tr>
+</table>
+<span class="footnote-ref">*</span><span class="footnote">Need not be set</span>
+<br>
+<a style="margin-bottom:10px; margin-top:10px; cursor:hand; cursor:pointer" onclick="resize_textarea('wsdl-textarea');expandcontent(this, 'wsdl-div')">Show WSDL type definition</a>
+<div class="switchcontent" id="wsdl-div">
+<textarea cols="20" rows="10" name="wsdl-textarea" wrap="off" readonly="1" id="wsdl-textarea">         <complexType xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="HostDateTimeConfig">
+            <complexContent>
+               <extension base="vim25:DynamicData">
+                  <sequence>
+                     <element name="timeZone" type="xsd:string" minOccurs="0"/>
+                     <element name="ntpConfig" type="vim25:HostNtpConfig" minOccurs="0"/>
+                     <element name="ptpConfig" type="vim25:HostPtpConfig" minOccurs="0"/>
+                     <element name="protocol" type="xsd:string" minOccurs="0"/>
+                     <element name="enabled" type="xsd:boolean" minOccurs="0"/>
+                     <element name="disableEvents" type="xsd:boolean" minOccurs="0"/>
+                     <element name="disableFallback" type="xsd:boolean" minOccurs="0"/>
+                     <element name="resetToFactoryDefaults" type="xsd:boolean" minOccurs="0"/>
+                  </sequence>
+               </extension>
+            </complexContent>
+         </complexType></textarea>
+</div>
+<br>
+<br>
+<table cellspacing="0" class="header-footer" id="bottom">
+<tr>
+<td><a href="#top">Top of page</a></td><td></td><td><a href="#field_detail">Local Properties</a></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<script language="javascript">document.write(ID_Copyright);</script>
+<br>
+<script language="javascript">document.write(ID_VersionInformation);</script>
+</body>
+</html>

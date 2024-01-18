@@ -1,0 +1,124 @@
+<html xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vim2="urn:vim2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="./commonRes.js" language="JavaScript"></script>
+<link href="doc-style.css" type="text/css" rel="StyleSheet">
+</head>
+<script src="dynamic-content.js" type="text/javascript"></script>
+<body>
+<table cellspacing="0" class="header-footer" id="top">
+<tr>
+<td>
+<br>
+</td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<a id="vim.host.SgxInfo.SgxStates" name="vim.host.SgxInfo.SgxStates"></a>
+<h1>Enum - 
+						HostSgxInfoSgxStates(vim.host.SgxInfo.SgxStates)</h1>
+<dl>
+<dt>Since </dt>
+<dd>vSphere API 7.0</dd>
+<p></p>
+</dl>
+<br>
+<h2>Enum Description</h2>
+<p></p>
+<p></p>
+         Host SGX states.
+      <p></p>
+<a id="field_detail" name="field_detail"></a>
+<p class="table-title">Enum Constants</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><a id="disabledBIOS" name="disabledBIOS"></a>disabledBIOS</td><td>
+      SGX is disabled in the BIOS.
+   <br>
+</td>
+</tr>
+<tr class="r0">
+<td><a id="disabledCFW101" name="disabledCFW101"></a>disabledCFW101</td><td>
+      SGX is disabled because CPU erratum CFW101 is present.
+   <br>
+</td>
+</tr>
+<tr class="r1">
+<td><a id="disabledCPUMismatch" name="disabledCPUMismatch"></a>disabledCPUMismatch</td><td>
+      SGX is disabled due to a mismatch in the SGX capabilities
+  exposed by different CPUs.
+   <br>
+</td>
+</tr>
+<tr class="r0">
+<td><a id="disabledMaxEPCRegs" name="disabledMaxEPCRegs"></a>disabledMaxEPCRegs</td><td>
+      SGX is disabled because the host exceeds the maximum supported
+  number of EPC regions.
+   <br>
+</td>
+</tr>
+<tr class="r1">
+<td><a id="disabledNoFLC" name="disabledNoFLC"></a>disabledNoFLC</td><td>
+      SGX is disabled because the CPU does not support FLC.
+   <br>
+</td>
+</tr>
+<tr class="r0">
+<td><a id="disabledNUMAUnsup" name="disabledNUMAUnsup"></a>disabledNUMAUnsup</td><td>
+      SGX is disabled because the host uses NUMA, which is not
+  supported with SGX.
+   <br>
+</td>
+</tr>
+<tr class="r1">
+<td><a id="enabled" name="enabled"></a>enabled</td><td>
+      SGX is enabled.
+   <br>
+</td>
+</tr>
+<tr class="r0">
+<td><a id="notPresent" name="notPresent"></a>notPresent</td><td>
+      SGX is not present in the CPU.
+   <br>
+</td>
+</tr>
+</table>
+<br>
+<a style="margin-bottom:10px; margin-top:10px; cursor:hand; cursor:pointer" onclick="resize_textarea('wsdl-textarea');expandcontent(this, 'wsdl-div')">Show WSDL type definition</a>
+<div class="switchcontent" id="wsdl-div">
+<textarea cols="20" rows="10" name="wsdl-textarea" wrap="off" readonly="1" id="wsdl-textarea">         <simpleType xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="HostSgxInfoSgxStates">
+            <restriction base="xsd:string">
+               <enumeration value="notPresent"/>
+               <enumeration value="disabledBIOS"/>
+               <enumeration value="disabledCFW101"/>
+               <enumeration value="disabledCPUMismatch"/>
+               <enumeration value="disabledNoFLC"/>
+               <enumeration value="disabledNUMAUnsup"/>
+               <enumeration value="disabledMaxEPCRegs"/>
+               <enumeration value="enabled"/>
+            </restriction>
+         </simpleType></textarea>
+</div>
+<br>
+<br>
+<table cellspacing="0" class="header-footer" id="bottom">
+<tr>
+<td><a href="#top">Top of page</a></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<script language="javascript">document.write(ID_Copyright);</script>
+<br>
+<script language="javascript">document.write(ID_VersionInformation);</script>
+</body>
+</html>

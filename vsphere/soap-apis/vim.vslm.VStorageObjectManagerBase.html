@@ -1,0 +1,729 @@
+<html xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vim2="urn:vim2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="./commonRes.js" language="JavaScript"></script>
+<link href="doc-style.css" type="text/css" rel="StyleSheet">
+</head>
+<script src="dynamic-content.js" type="text/javascript"></script>
+<body>
+<table cellspacing="0" class="header-footer" id="top">
+<tr>
+<td>
+<br>
+</td><td></td><td></td><td><a href="#method_detail">Local Methods</a></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<a id="vim.vslm.VStorageObjectManagerBase" name="vim.vslm.VStorageObjectManagerBase"></a>
+<h1>Managed Object -  
+						VStorageObjectManagerBase(vim.vslm.VStorageObjectManagerBase)</h1>
+<dl>
+<dt>Property of</dt>
+<dd>
+<a href="vim.ServiceInstanceContent.html#field_detail">ServiceContent</a>
+</dd>
+<dt>Extended by</dt>
+<dd>
+<a href="vim.vslm.host.VStorageObjectManager.html">HostVStorageObjectManager</a>, <a href="vim.vslm.vcenter.VStorageObjectManager.html">VcenterVStorageObjectManager</a>
+</dd>
+<dt>See also</dt>
+<dd>
+<a href="vim.Datastore.html">Datastore</a>, <a href="vim.vslm.ID.html">ID</a>, <a href="vim.vslm.VClockInfo.html">vslmVClockInfo</a>, <a href="vim.vslm.VStorageObjectSnapshot.html">VStorageObjectSnapshot</a>
+</dd>
+<dt>Since </dt>
+<dd>vSphere API 6.5</dd>
+<p></p>
+</dl>
+<br>
+<h2>Managed Object Description</h2>
+<p></p>
+         Base interface to manage virtual storage object.
+      <a id="field_detail" name="field_detail"></a>
+<p class="table-title">Properties</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Name
+	        </th><th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr class="r0">
+<td colspan="3">None</td>
+</tr>
+</table>
+<br>
+<a id="method_detail" name="method_detail"></a>
+<p class="table-title">Methods</p>
+<table cellspacing="0">
+<tr class="r1">
+<th>
+				          Methods defined in this Managed Object
+				        </th>
+</tr>
+<tr class="r0">
+<td><a href="#renameVStorageObjectEx">RenameVStorageObjectEx</a>, <a href="#revertVStorageObjectEx">RevertVStorageObjectEx_Task</a>, <a href="#createSnapshotEx">VStorageObjectCreateSnapshotEx_Task</a>, <a href="#deleteSnapshotEx">VStorageObjectDeleteSnapshotEx_Task</a>, <a href="#extendDiskEx">VStorageObjectExtendDiskEx_Task</a></td>
+</tr>
+</table>
+<br>
+<a id="renameVStorageObjectEx" name="renameVStorageObjectEx"></a>
+<h1>RenameVStorageObjectEx(renameVStorageObjectEx)</h1>
+<p></p>
+<p></p>
+         Rename a virtual storage object.
+      <dl>
+<dt>Required Privileges</dt>
+<dd>System.View</dd>
+<dt>Since </dt>
+<dd>8.0.2.0</dd>
+</dl>
+<p class="table-title">
+		Parameters
+		</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><strong>_this</strong></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a></td><td>
+					A reference to the 
+						<a href="vim.vslm.VStorageObjectManagerBase.html">VStorageObjectManagerBase</a>
+						used to make the method call.
+					</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>id</strong><span title="Required Privilege: id" class="privilege-ref"> P</span></td><td><a href="vim.vslm.ID.html">ID</a></td><td>
+<p></p>
+<p></p>
+         The ID of the virtual storage object to be renamed.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><strong>datastore</strong><span title="Required Privilege: datastore" class="privilege-ref"> P</span></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Datastore.html">Datastore</a></td><td>
+<p></p>
+<p></p>
+         The datastore where the virtual storage object is
+                   located.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>name</strong><span title="Required Privilege: name" class="privilege-ref"> P</span></td><td>xsd:string</td><td>
+<p></p>
+<p></p>
+         The new name for the virtual storage object.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+</table>
+<span class="privilege-ref">P</span><span class="footnote">Required privilege - see tooltip for details</span>
+<br>
+<p class="table-title">
+		Return Value
+		</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr>
+<td><a href="vim.vslm.VClockInfo.html">vslmVClockInfo</a></td><td>The vclock info of this operation</td>
+</tr>
+</table>
+<br>
+<p class="table-title">
+         Faults
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th><th>
+               Description
+            </th>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.FileFault.html">FileFault</a></td><td>Thrown if an error occurs while renaming the virtual storage object.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.InvalidDatastore.html">InvalidDatastore</a></td><td>Thrown if the operation cannot be performed on the datastore.</td>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.NotFound.html">NotFound</a></td><td>Thrown if the specified virtual storage object cannot be found.</td>
+</tr>
+<tr class="r0">
+<td><a href="vmodl.RuntimeFault.html">RuntimeFault</a></td><td>Thrown if any type of runtime fault is thrown that is not covered by the other faults; for example, a communication error.</td>
+</tr>
+</table>
+<p class="table-title">
+         Events
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th>
+</tr>
+<tr class="r1">
+<td colspan="2">None</td>
+</tr>
+</table>
+<br>
+<a style="margin-bottom:10px; margin-top:10px; cursor:hand; cursor:pointer" onclick="resize_textarea('RenameVStorageObjectEx-textarea');expandcontent(this, 'RenameVStorageObjectEx-div')">Show WSDL type definition</a>
+<div class="switchcontent" id="RenameVStorageObjectEx-div">
+<textarea cols="20" rows="10" name="RenameVStorageObjectEx-textarea" wrap="off" readonly="1" id="RenameVStorageObjectEx-textarea">         <element xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="RenameVStorageObjectEx" type="vim25:RenameVStorageObjectExRequestType"/>
+         <element xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="RenameVStorageObjectExResponse">
+                  <complexType>
+                     <sequence>
+                        <element name="returnval" type="vim25:vslmVClockInfo"/>
+                     </sequence>
+                  </complexType>
+               </element></textarea>
+</div>
+<br>
+<br>
+<br>
+<a id="revertVStorageObjectEx" name="revertVStorageObjectEx"></a>
+<h1>RevertVStorageObjectEx_Task(revertVStorageObjectEx)</h1>
+<p></p>
+<p></p>
+         Reverts to a given snapshot of a VStorageObject.
+ This operation is supported on detached VirtualDisks
+ During revert all the snapshots which were taken after the specified
+ snapshot would get deleted.
+
+ <p>
+ E.g. Consider Disk with 4 snapshots
+ <p>
+      BaseDisk -> Snap-2 -> Snap-3 -> Snap-4 -> Running-Point
+ <p>
+  If user chooses to revert to snap-2 then snap-4 and snap-3 would also
+  be deleted. After revert operation disk would have below configuration:
+ <p>
+      BaseDisk -> Snap-2 -> Running-Point
+
+ <p>
+ Requires Datastore.FileManagement privilege.
+ <p>
+      <dl>
+<dt>Required Privileges</dt>
+<dd>System.View</dd>
+<dt>Since </dt>
+<dd>8.0.2.0</dd>
+</dl>
+<p class="table-title">
+		Parameters
+		</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><strong>_this</strong></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a></td><td>
+					A reference to the 
+						<a href="vim.vslm.VStorageObjectManagerBase.html">VStorageObjectManagerBase</a>
+						used to make the method call.
+					</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>id</strong><span title="Required Privilege: id" class="privilege-ref"> P</span></td><td><a href="vim.vslm.ID.html">ID</a></td><td>
+<p></p>
+<p></p>
+         The ID of the virtual storage object.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><strong>datastore</strong><span title="Required Privilege: datastore" class="privilege-ref"> P</span></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Datastore.html">Datastore</a></td><td>
+<p></p>
+<p></p>
+         The datastore where the source virtual storage object
+                  is located.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>snapshotId</strong><span title="Required Privilege: snapshotId" class="privilege-ref"> P</span></td><td><a href="vim.vslm.ID.html">ID</a></td><td>
+<p></p>
+<p></p>
+         The ID of the snapshot of a virtual storage object.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+</table>
+<span class="privilege-ref">P</span><span class="footnote">Required privilege - see tooltip for details</span>
+<br>
+<p class="table-title">
+		Return Value
+		</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr>
+<td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Task.html">Task</a></td><td></td>
+</tr>
+</table>
+<br>
+<p class="table-title">
+         Faults
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th><th>
+               Description
+            </th>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.FileFault.html">FileFault</a></td><td>Thrown if an error occurs while snapshotting the virtual storage object.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.InvalidDatastore.html">InvalidDatastore</a></td><td>Thrown if the operation cannot be performed on the datastore.</td>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.InvalidState.html">InvalidState</a></td><td>Thrown if the operation cannot be performed on the disk.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.NotFound.html">NotFound</a></td><td>Thrown if specified virtual storage object cannot be found.</td>
+</tr>
+<tr class="r1">
+<td><a href="vmodl.RuntimeFault.html">RuntimeFault</a></td><td>Thrown if any type of runtime fault is thrown that is not covered by the other faults; for example, a communication error.</td>
+</tr>
+</table>
+<p class="table-title">
+         Events
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th>
+</tr>
+<tr class="r1">
+<td colspan="2">None</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<a id="createSnapshotEx" name="createSnapshotEx"></a>
+<h1>VStorageObjectCreateSnapshotEx_Task(createSnapshotEx)</h1>
+<p></p>
+<p></p>
+         Creates a snapshot of a given VStorageObject.
+ <p>
+ Requires Datastore.FileManagement privilege.
+ <p>
+      <dl>
+<dt>Required Privileges</dt>
+<dd>System.View</dd>
+<dt>Since </dt>
+<dd>8.0.2.0</dd>
+</dl>
+<p class="table-title">
+		Parameters
+		</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><strong>_this</strong></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a></td><td>
+					A reference to the 
+						<a href="vim.vslm.VStorageObjectManagerBase.html">VStorageObjectManagerBase</a>
+						used to make the method call.
+					</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>id</strong><span title="Required Privilege: id" class="privilege-ref"> P</span></td><td><a href="vim.vslm.ID.html">ID</a></td><td>
+<p></p>
+<p></p>
+         The ID of the virtual storage object.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><strong>datastore</strong><span title="Required Privilege: datastore" class="privilege-ref"> P</span></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Datastore.html">Datastore</a></td><td>
+<p></p>
+<p></p>
+         The datastore where the source virtual storage object
+                  is located.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>description</strong><span title="Required Privilege: description" class="privilege-ref"> P</span></td><td>xsd:string</td><td>
+<p></p>
+<p></p>
+         A short description to be associated with the snapshot.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+</table>
+<span class="privilege-ref">P</span><span class="footnote">Required privilege - see tooltip for details</span>
+<br>
+<p class="table-title">
+		Return Value
+		</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr>
+<td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Task.html">Task</a></td><td></td>
+</tr>
+</table>
+<br>
+<p class="table-title">
+         Faults
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th><th>
+               Description
+            </th>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.FileFault.html">FileFault</a></td><td>Thrown if an error occurs while snapshotting the virtual storage object.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.InvalidDatastore.html">InvalidDatastore</a></td><td>Thrown if the operation cannot be performed on the datastore.</td>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.InvalidState.html">InvalidState</a></td><td>Thrown if the operation cannot be performed on the disk.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.NotFound.html">NotFound</a></td><td>Thrown if specified virtual storage object cannot be found.</td>
+</tr>
+<tr class="r1">
+<td><a href="vmodl.RuntimeFault.html">RuntimeFault</a></td><td>Thrown if any type of runtime fault is thrown that is not covered by the other faults; for example, a communication error.</td>
+</tr>
+</table>
+<p class="table-title">
+         Events
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th>
+</tr>
+<tr class="r1">
+<td colspan="2">None</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<a id="deleteSnapshotEx" name="deleteSnapshotEx"></a>
+<h1>VStorageObjectDeleteSnapshotEx_Task(deleteSnapshotEx)</h1>
+<p></p>
+<p></p>
+         Deletes a given snapshot of a VStorageObject.
+ <p>
+ Requires Datastore.FileManagement privilege.
+ <p>
+      <dl>
+<dt>Required Privileges</dt>
+<dd>System.View</dd>
+<dt>Since </dt>
+<dd>8.0.2.0</dd>
+</dl>
+<p class="table-title">
+		Parameters
+		</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><strong>_this</strong></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a></td><td>
+					A reference to the 
+						<a href="vim.vslm.VStorageObjectManagerBase.html">VStorageObjectManagerBase</a>
+						used to make the method call.
+					</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>id</strong><span title="Required Privilege: id" class="privilege-ref"> P</span></td><td><a href="vim.vslm.ID.html">ID</a></td><td>
+<p></p>
+<p></p>
+         The ID of the virtual storage object.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><strong>datastore</strong><span title="Required Privilege: datastore" class="privilege-ref"> P</span></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Datastore.html">Datastore</a></td><td>
+<p></p>
+<p></p>
+         The datastore where the source virtual storage object
+                  is located.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>snapshotId</strong><span title="Required Privilege: snapshotId" class="privilege-ref"> P</span></td><td><a href="vim.vslm.ID.html">ID</a></td><td>
+<p></p>
+<p></p>
+         The ID of the snapshot of a virtual storage object.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+</table>
+<span class="privilege-ref">P</span><span class="footnote">Required privilege - see tooltip for details</span>
+<br>
+<p class="table-title">
+		Return Value
+		</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr>
+<td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Task.html">Task</a></td><td></td>
+</tr>
+</table>
+<br>
+<p class="table-title">
+         Faults
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th><th>
+               Description
+            </th>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.FileFault.html">FileFault</a></td><td>Thrown if an error occurs while snapshotting the virtual storage object.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.InvalidDatastore.html">InvalidDatastore</a></td><td>Thrown if the operation cannot be performed on the datastore.</td>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.InvalidState.html">InvalidState</a></td><td>Thrown if the operation cannot be performed on the disk.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.NotFound.html">NotFound</a></td><td>Thrown if specified virtual storage object cannot be found.</td>
+</tr>
+<tr class="r1">
+<td><a href="vmodl.RuntimeFault.html">RuntimeFault</a></td><td>Thrown if any type of runtime fault is thrown that is not covered by the other faults; for example, a communication error.</td>
+</tr>
+</table>
+<p class="table-title">
+         Events
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th>
+</tr>
+<tr class="r1">
+<td colspan="2">None</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<a id="extendDiskEx" name="extendDiskEx"></a>
+<h1>VStorageObjectExtendDiskEx_Task(extendDiskEx)</h1>
+<p></p>
+<p></p>
+         Expand the capacity of a virtual disk, which is a storage object with
+  vim.vslm.VStorageObject.ConsumptionType#disk, to the new
+  capacity. If new capacity is smaller than current disk capacity, then
+  operation fails due to invalid capacity. If new capacity is greater
+  than current disk capacity, then operation proceeds. If new capacity
+  is equal to current disk ccapcity, then operation succeeds without
+  any actual extension.
+
+  The extended disk region will be the same as the original disk:
+  - For a zerothick disk, the extended disk region will be zeroedthick.
+  - For an eagerzerothick disk, the extended disk region will be
+    eagerzeroedthick
+  - A thin-provisioned disk will always be extended as a thin-provisioned
+    disk.
+      <dl>
+<dt>Required Privileges</dt>
+<dd>System.View</dd>
+<dt>Since </dt>
+<dd>8.0.2.0</dd>
+</dl>
+<p class="table-title">
+		Parameters
+		</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Type</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><strong>_this</strong></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a></td><td>
+					A reference to the 
+						<a href="vim.vslm.VStorageObjectManagerBase.html">VStorageObjectManagerBase</a>
+						used to make the method call.
+					</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>id</strong><span title="Required Privilege: id" class="privilege-ref"> P</span></td><td><a href="vim.vslm.ID.html">ID</a></td><td>
+<p></p>
+<p></p>
+         The ID of the virtual disk to be extended.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><strong>datastore</strong><span title="Required Privilege: datastore" class="privilege-ref"> P</span></td><td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Datastore.html">Datastore</a></td><td>
+<p></p>
+<p></p>
+         The datastore where the virtual disk is located.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><strong>newCapacityInMB</strong><span title="Required Privilege: newCapacityInMB" class="privilege-ref"> P</span></td><td>xsd:long</td><td>
+<p></p>
+<p></p>
+         The new capacity of the virtual disk in MB.
+      <p></p>
+<B><I>Since </I></B>8.0.2.0<br>
+</td>
+</tr>
+</table>
+<span class="privilege-ref">P</span><span class="footnote">Required privilege - see tooltip for details</span>
+<br>
+<p class="table-title">
+		Return Value
+		</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr>
+<td><a href="vmodl.ManagedObjectReference.html">ManagedObjectReference</a>
+<br> to a
+                  <a href="vim.Task.html">Task</a></td><td>This method returns a <a href="vim.Task.html">Task</a> object with which to monitor the operation.</td>
+</tr>
+</table>
+<br>
+<p class="table-title">
+         Faults
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th><th>
+               Description
+            </th>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.FileFault.html">FileFault</a></td><td>Thrown if an error occurs while extending the virtual disk.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.InvalidDatastore.html">InvalidDatastore</a></td><td>Thrown if the operation cannot be performed on the datastore.</td>
+</tr>
+<tr class="r1">
+<td><a href="vim.fault.InvalidState.html">InvalidState</a></td><td>Thrown if the operation cannot be performed on the disk. The disk may be consumed and cannot be extended.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.NotFound.html">NotFound</a></td><td>Thrown if the specified virtual storage object cannot be found.</td>
+</tr>
+<tr class="r1">
+<td><a href="vmodl.RuntimeFault.html">RuntimeFault</a></td><td>Thrown if any type of runtime fault is thrown that is not covered by the other faults; for example, a communication error.</td>
+</tr>
+<tr class="r0">
+<td><a href="vim.fault.TaskInProgress.html">TaskInProgress</a></td><td>Thrown if the virtual storage object is busy.</td>
+</tr>
+</table>
+<p class="table-title">
+         Events
+      </p>
+<table cellspacing="0">
+<tr>
+<th>
+               Type
+            </th>
+</tr>
+<tr class="r1">
+<td colspan="2">None</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<table cellspacing="0" class="header-footer" id="bottom">
+<tr>
+<td><a href="#top">Top of page</a></td><td></td><td></td><td><a href="#method_detail">Local Methods</a></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<script language="javascript">document.write(ID_Copyright);</script>
+<br>
+<script language="javascript">document.write(ID_VersionInformation);</script>
+</body>
+</html>

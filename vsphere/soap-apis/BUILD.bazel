@@ -1,0 +1,10 @@
+# Copyright (c) 2020-2023 VMware, Inc.  All rights reserved.
+# VMware Confidential
+
+exports_files(["joap-eve-landing-page.md"])
+
+filegroup(
+    name = "doctemplates",
+    srcs = ["docTemplates.properties"],
+    visibility = ["//visibility:public"],  # see //vim/vmomi:defs.bzl
+)

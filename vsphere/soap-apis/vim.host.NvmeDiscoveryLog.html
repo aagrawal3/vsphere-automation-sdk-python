@@ -1,0 +1,129 @@
+<html xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vim2="urn:vim2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="./commonRes.js" language="JavaScript"></script>
+<link href="doc-style.css" type="text/css" rel="StyleSheet">
+</head>
+<script src="dynamic-content.js" type="text/javascript"></script>
+<body>
+<table cellspacing="0" class="header-footer" id="top">
+<tr>
+<td>
+<br>
+</td><td></td><td><a href="#field_detail">Local Properties</a></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<a id="vim.host.NvmeDiscoveryLog" name="vim.host.NvmeDiscoveryLog"></a>
+<h1>Data Object - HostNvmeDiscoveryLog(vim.host.NvmeDiscoveryLog)</h1>
+<dl>
+<dt>Returned by</dt>
+<dd>
+<a href="vim.host.StorageSystem.html#discoverNvmeControllers">DiscoverNvmeControllers</a>
+</dd>
+<dt>Extends</dt>
+<dd>
+<a href="vmodl.DynamicData.html">DynamicData</a>
+</dd>
+<dt>See also</dt>
+<dd>
+<a href="vim.host.NvmeDiscoveryLog.Entry.html">HostNvmeDiscoveryLogEntry</a>
+</dd>
+<dt>Since </dt>
+<dd>vSphere API 7.0</dd>
+<p></p>
+</dl>
+<H2>Data Object 
+                  Description</H2>
+<p></p>
+<p></p>
+         This data object represents the Discovery Log returned by
+  an NVME over Fabrics Discovery controller.
+  <p>
+  The Discovery Log consists of pages which contain a number
+  of entries. It provides an inventory of NVM subsystems with
+  which the host may attempt to form an association through
+  an NVME over Fabrics adapter. For details, see:
+  <ul>
+  <li>"NVM Express over Fabrics 1.0", Section 5.3,
+  Discovery Log Page</li>
+  </ul>
+      <p></p>
+<a id="field_detail" name="field_detail"></a>
+<p class="table-title">Properties</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Name
+	        </th><th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="complete" name="complete"></a><strong>complete</strong></td><td>xsd:boolean</td><td>
+<p></p>
+<p></p>
+         Indicates whether the NvmeDiscoveryLog object completely
+  represents the underlying Discovery Log returned by the
+  controller.
+  <p>
+  It is possible some of the entries returned by the Discovery
+  Controller contain unsupported transport types or data that
+  cannot be interpreted - in that case, those entries will be
+  skipped and the log will be marked as incomplete.
+      <br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="entry" name="entry"></a><strong>entry</strong><span title="Need not be set" class="footnote-ref">*</span></td><td><a href="vim.host.NvmeDiscoveryLog.Entry.html">HostNvmeDiscoveryLogEntry[]</a></td><td>
+<p></p>
+<p></p>
+         The list of entries that make up the Discovery Log.
+      <br>
+</td>
+</tr>
+<tr class="r1">
+<td colspan="3">
+						Properties inherited from <a href="vmodl.DynamicData.html">DynamicData</a></td>
+</tr>
+<tr class="r0">
+<td colspan="3">None</td>
+</tr>
+</table>
+<span class="footnote-ref">*</span><span class="footnote">Need not be set</span>
+<br>
+<a style="margin-bottom:10px; margin-top:10px; cursor:hand; cursor:pointer" onclick="resize_textarea('wsdl-textarea');expandcontent(this, 'wsdl-div')">Show WSDL type definition</a>
+<div class="switchcontent" id="wsdl-div">
+<textarea cols="20" rows="10" name="wsdl-textarea" wrap="off" readonly="1" id="wsdl-textarea">         <complexType xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="HostNvmeDiscoveryLog">
+            <complexContent>
+               <extension base="vim25:DynamicData">
+                  <sequence>
+                     <element name="entry" type="vim25:HostNvmeDiscoveryLogEntry" minOccurs="0" maxOccurs="unbounded"/>
+                     <element name="complete" type="xsd:boolean"/>
+                  </sequence>
+               </extension>
+            </complexContent>
+         </complexType></textarea>
+</div>
+<br>
+<br>
+<table cellspacing="0" class="header-footer" id="bottom">
+<tr>
+<td><a href="#top">Top of page</a></td><td></td><td><a href="#field_detail">Local Properties</a></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<script language="javascript">document.write(ID_Copyright);</script>
+<br>
+<script language="javascript">document.write(ID_VersionInformation);</script>
+</body>
+</html>

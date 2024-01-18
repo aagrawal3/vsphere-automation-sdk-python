@@ -1,0 +1,102 @@
+<html xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vim2="urn:vim2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="./commonRes.js" language="JavaScript"></script>
+<link href="doc-style.css" type="text/css" rel="StyleSheet">
+</head>
+<script src="dynamic-content.js" type="text/javascript"></script>
+<body>
+<table cellspacing="0" class="header-footer" id="top">
+<tr>
+<td>
+<br>
+</td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<a id="vim.vm.GuestInfo.CustomizationStatus" name="vim.vm.GuestInfo.CustomizationStatus"></a>
+<h1>Enum - 
+						GuestInfoCustomizationStatus(vim.vm.GuestInfo.CustomizationStatus)</h1>
+<dl>
+<dt>Since </dt>
+<dd>vSphere API 7.0.2.0</dd>
+<p></p>
+</dl>
+<br>
+<h2>Enum Description</h2>
+<p></p>
+<p></p>
+         Guest customization status
+      <p></p>
+<a id="field_detail" name="field_detail"></a>
+<p class="table-title">Enum Constants</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><a id="TOOLSDEPLOYPKG_FAILED" name="TOOLSDEPLOYPKG_FAILED"></a>TOOLSDEPLOYPKG_FAILED</td><td>
+      The customizatio process has failed inside the guest OS
+   <br>
+</td>
+</tr>
+<tr class="r0">
+<td><a id="TOOLSDEPLOYPKG_IDLE" name="TOOLSDEPLOYPKG_IDLE"></a>TOOLSDEPLOYPKG_IDLE</td><td>
+      No guest customizationSpec has been applied for the VM
+   <br>
+</td>
+</tr>
+<tr class="r1">
+<td><a id="TOOLSDEPLOYPKG_PENDING" name="TOOLSDEPLOYPKG_PENDING"></a>TOOLSDEPLOYPKG_PENDING</td><td>
+      The guest customizationSpec has been applied for the VM,
+ but the customization process has not yet started inside the guest OS
+   <br>
+</td>
+</tr>
+<tr class="r0">
+<td><a id="TOOLSDEPLOYPKG_RUNNING" name="TOOLSDEPLOYPKG_RUNNING"></a>TOOLSDEPLOYPKG_RUNNING</td><td>
+      The customization process is currently running inside the guest OS
+   <br>
+</td>
+</tr>
+<tr class="r1">
+<td><a id="TOOLSDEPLOYPKG_SUCCEEDED" name="TOOLSDEPLOYPKG_SUCCEEDED"></a>TOOLSDEPLOYPKG_SUCCEEDED</td><td>
+      The customization process has completed successfully inside the
+  guest OS
+   <br>
+</td>
+</tr>
+</table>
+<br>
+<a style="margin-bottom:10px; margin-top:10px; cursor:hand; cursor:pointer" onclick="resize_textarea('wsdl-textarea');expandcontent(this, 'wsdl-div')">Show WSDL type definition</a>
+<div class="switchcontent" id="wsdl-div">
+<textarea cols="20" rows="10" name="wsdl-textarea" wrap="off" readonly="1" id="wsdl-textarea">         <simpleType xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="GuestInfoCustomizationStatus">
+            <restriction base="xsd:string">
+               <enumeration value="TOOLSDEPLOYPKG_IDLE"/>
+               <enumeration value="TOOLSDEPLOYPKG_PENDING"/>
+               <enumeration value="TOOLSDEPLOYPKG_RUNNING"/>
+               <enumeration value="TOOLSDEPLOYPKG_SUCCEEDED"/>
+               <enumeration value="TOOLSDEPLOYPKG_FAILED"/>
+            </restriction>
+         </simpleType></textarea>
+</div>
+<br>
+<br>
+<table cellspacing="0" class="header-footer" id="bottom">
+<tr>
+<td><a href="#top">Top of page</a></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<script language="javascript">document.write(ID_Copyright);</script>
+<br>
+<script language="javascript">document.write(ID_VersionInformation);</script>
+</body>
+</html>

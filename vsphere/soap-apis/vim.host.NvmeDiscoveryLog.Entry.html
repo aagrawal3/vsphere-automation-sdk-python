@@ -1,0 +1,230 @@
+<html xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vim2="urn:vim2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="./commonRes.js" language="JavaScript"></script>
+<link href="doc-style.css" type="text/css" rel="StyleSheet">
+</head>
+<script src="dynamic-content.js" type="text/javascript"></script>
+<body>
+<table cellspacing="0" class="header-footer" id="top">
+<tr>
+<td>
+<br>
+</td><td></td><td><a href="#field_detail">Local Properties</a></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<a id="vim.host.NvmeDiscoveryLog.Entry" name="vim.host.NvmeDiscoveryLog.Entry"></a>
+<h1>Data Object - HostNvmeDiscoveryLogEntry(vim.host.NvmeDiscoveryLog.Entry)</h1>
+<dl>
+<dt>Property of</dt>
+<dd>
+<a href="vim.host.NvmeDiscoveryLog.html#field_detail">HostNvmeDiscoveryLog</a>
+</dd>
+<dt>Extends</dt>
+<dd>
+<a href="vmodl.DynamicData.html">DynamicData</a>
+</dd>
+<dt>See also</dt>
+<dd>
+<a href="vim.host.NvmeTransportParameters.html">HostNvmeTransportParameters</a>
+</dd>
+<dt>Since </dt>
+<dd>vSphere API 7.0</dd>
+<p></p>
+</dl>
+<H2>Data Object 
+                  Description</H2>
+<p></p>
+<p></p>
+         This data object represents a single entry in the Discovery
+  Log returned by a Discovery controller.
+      <p></p>
+<a id="field_detail" name="field_detail"></a>
+<p class="table-title">Properties</p>
+<table cellspacing="0">
+<tr>
+<th>
+	          Name
+	        </th><th>
+	          Type
+	        </th><th>
+	          Description
+	        </th>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="adminQueueMaxSize" name="adminQueueMaxSize"></a><strong>adminQueueMaxSize</strong></td><td>xsd:int</td><td>
+<p></p>
+<p></p>
+         The maximum size of the Admin Submission Queue.
+  <p>
+  Corresponds to the ASQSZ field in the Discovery Log
+  Page Entry as specified by the NVME over Fabrics spec.
+
+  This applies to all controllers within the NVM Subsystem.
+  When establishing a connection, the value of
+  <a href="vim.host.NvmeConnectSpec.html#adminQueueSize">adminQueueSize</a> may not exceed
+  this value.
+      <br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="connected" name="connected"></a><strong>connected</strong></td><td>xsd:boolean</td><td>
+<p></p>
+<p></p>
+         Indicates whether the controller represented
+  by this Discovery Log Page Entry is already connected
+  to the adapter through which the discovery is initiated.
+      <br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="controllerId" name="controllerId"></a><strong>controllerId</strong></td><td>xsd:int</td><td>
+<p></p>
+<p></p>
+         NVME Controller ID within the NVM subsystem.
+  <p>
+  Corresponds to the CNTLID field in the Discovery Log
+  Page Entry as specified by the NVME over Fabrics spec.
+
+  In the static controller model, this field may be set
+  to a specific controller ID which can be used to connect
+  to that particular controller. It could also be set
+  to 0xFFFE (65534 in decimal), in which case the controller
+  ID will be allocated when a connection is established.
+
+  In the dynamic controller model, this field shall be set
+  to 0xFFFF (65535 in decimal).
+
+  Note that this is different from the controllerNumber
+  <a href="vim.host.NvmeController.html#controllerNumber">controllerNumber</a>,
+  which is the unique identifier of the NVMe controller
+  within the entire host and is allocated only after a
+  connection is established.
+      <br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="subnqn" name="subnqn"></a><strong>subnqn</strong></td><td>xsd:string</td><td>
+<p></p>
+<p></p>
+         NVME Qualified name of the discovered subsystem.
+  <p>
+  Corresponds to the SUBNQN field in the Discovery Log
+  Page Entry as specified by the NVME over Fabrics spec.
+      <br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="subsystemPortId" name="subsystemPortId"></a><strong>subsystemPortId</strong></td><td>xsd:int</td><td>
+<p></p>
+<p></p>
+         NVM subsystem port ID.
+  <p>
+  Corresponds to the PORTID field in the Discovery Log
+  Page Entry as specified by the NVME over Fabrics spec.
+  For an overview, see:
+  <ul>
+  <li>"NVM Express over Fabrics 1.0", Section 1.5.2,
+  NVM Subsystem</li>
+  </ul>
+      <br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="subsystemType" name="subsystemType"></a><strong>subsystemType</strong></td><td>xsd:string</td><td>
+<p></p>
+<p></p>
+         NVM Subsystem type.
+  <p>
+  Corresponds to the SUBTYPE field in the Discovery Log
+  Page Entry as specified by the NVME over Fabrics spec.
+  The set of supported values is described in
+  SubsystemType.
+      <br>
+</td>
+</tr>
+<tr class="r1">
+<td nowrap="1"><a id="transportParameters" name="transportParameters"></a><strong>transportParameters</strong></td><td><a href="vim.host.NvmeTransportParameters.html">HostNvmeTransportParameters</a></td><td>
+<p></p>
+<p></p>
+         Transport specific parameters necessary to establish
+  a connection.
+  <p>
+  Different types of fabrics transports and different
+  means to specify a connection target may be supported.
+  The transport specific parameters object is constructed
+  based on the data in the Transport Type (TRTYPE),
+  Address Family (ADRFAM), Transport Service Identifier
+  (TRSVCID), Transport Address (TRADDR) and Transport
+  Specific Address Subtype (TSAS) fields in the Discovery
+  Log Page Entry as specified by the NVME over Fabrics spec.
+
+  When connecting to the controller represented by this
+  Discovery Log Page Entry, the transport specific
+  parameters can be passed directly as
+  NvmeConnectSpec#transportParameters.
+      <br>
+</td>
+</tr>
+<tr class="r0">
+<td nowrap="1"><a id="transportRequirements" name="transportRequirements"></a><strong>transportRequirements</strong></td><td>xsd:string</td><td>
+<p></p>
+<p></p>
+         The requirements for NVME Transport.
+  <p>
+  Corresponds to the TREQ field in the Discovery Log
+  Page Entry as specified by the NVME over Fabrics spec
+  The set of possible values is described in
+  TransportRequirements
+      <br>
+</td>
+</tr>
+<tr class="r1">
+<td colspan="3">
+						Properties inherited from <a href="vmodl.DynamicData.html">DynamicData</a></td>
+</tr>
+<tr class="r0">
+<td colspan="3">None</td>
+</tr>
+</table>
+<br>
+<a style="margin-bottom:10px; margin-top:10px; cursor:hand; cursor:pointer" onclick="resize_textarea('wsdl-textarea');expandcontent(this, 'wsdl-div')">Show WSDL type definition</a>
+<div class="switchcontent" id="wsdl-div">
+<textarea cols="20" rows="10" name="wsdl-textarea" wrap="off" readonly="1" id="wsdl-textarea">         <complexType xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="HostNvmeDiscoveryLogEntry">
+            <complexContent>
+               <extension base="vim25:DynamicData">
+                  <sequence>
+                     <element name="subnqn" type="xsd:string"/>
+                     <element name="subsystemType" type="xsd:string"/>
+                     <element name="subsystemPortId" type="xsd:int"/>
+                     <element name="controllerId" type="xsd:int"/>
+                     <element name="adminQueueMaxSize" type="xsd:int"/>
+                     <element name="transportParameters" type="vim25:HostNvmeTransportParameters"/>
+                     <element name="transportRequirements" type="xsd:string"/>
+                     <element name="connected" type="xsd:boolean"/>
+                  </sequence>
+               </extension>
+            </complexContent>
+         </complexType></textarea>
+</div>
+<br>
+<br>
+<table cellspacing="0" class="header-footer" id="bottom">
+<tr>
+<td><a href="#top">Top of page</a></td><td></td><td><a href="#field_detail">Local Properties</a></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<script language="javascript">document.write(ID_Copyright);</script>
+<br>
+<script language="javascript">document.write(ID_VersionInformation);</script>
+</body>
+</html>

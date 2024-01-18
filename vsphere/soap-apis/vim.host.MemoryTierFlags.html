@@ -1,0 +1,110 @@
+<html xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vim2="urn:vim2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="./commonRes.js" language="JavaScript"></script>
+<link href="doc-style.css" type="text/css" rel="StyleSheet">
+</head>
+<script src="dynamic-content.js" type="text/javascript"></script>
+<body>
+<table cellspacing="0" class="header-footer" id="top">
+<tr>
+<td>
+<br>
+</td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<a id="vim.host.MemoryTierFlags" name="vim.host.MemoryTierFlags"></a>
+<h1>Enum - 
+						HostMemoryTierFlags(vim.host.MemoryTierFlags)</h1>
+<dl>
+<dt>Since </dt>
+<dd>vSphere API 7.0.3.0</dd>
+<p></p>
+</dl>
+<br>
+<h2>Enum Description</h2>
+<p></p>
+<p></p>
+         Enumeration of flags pertaining to a memory tier.
+ <p>
+ Here are some examples of what the flags will look like for various memory
+ configurations:
+ <ul>
+ <li>Traditional memory (MemoryTieringType#noTiering): The host has a DRAM tier
+ for the main memory and nothing else. The DRAM tier will have the
+ MemoryTierFlags#memoryTier flag.</li>
+ <li>App Direct mode (MemoryTieringType#noTiering): The host has a DRAM tier
+ and a PMem tier, but the two are independent and unrelated. The PMem tier is
+ non-volatile and is exposed as an NVDIMM device. Applications can decide whether to
+ direct the reads and writes to DRAM or PMem by using the appropriate system call. The
+ DRAM tier will have the MemoryTierFlags#memoryTier flag and the PMem tier will
+ have the MemoryTierFlags#persistentTier flag.</li>
+ <li> Memory mode (MemoryTieringType#hardwareTiering): The host has a DRAM tier
+ and a PMem tier, but the DRAM is hidden from applications and is just a cache
+ for the PMem main memory. The PMem tier is volatile, and is abstracted by the hardware
+ layer to look like traditional memory. Applications can read from/write to memory
+ using the traditional memory system calls. The memory controller in the hardware will
+ internally direct those to the DRAM cache first, and on a cache miss redirect them to
+ the PMem main memory. The DRAM tier will have the MemoryTierFlags#cachingTier
+ flag and the PMem tier will have the MemoryTierFlags#memoryTier flag.</li>
+ </ul>
+      <p></p>
+<a id="field_detail" name="field_detail"></a>
+<p class="table-title">Enum Constants</p>
+<table cellspacing="0">
+<tr>
+<th>Name</th><th>Description</th>
+</tr>
+<tr class="r1">
+<td><a id="cachingTier" name="cachingTier"></a>cachingTier</td><td>
+      Flag indicating that the tier is a cache for main memory.
+   <br>
+</td>
+</tr>
+<tr class="r0">
+<td><a id="memoryTier" name="memoryTier"></a>memoryTier</td><td>
+      Flag indicating that the tier is the primary memory tier visible from the
+ host.
+   <br>
+</td>
+</tr>
+<tr class="r1">
+<td><a id="persistentTier" name="persistentTier"></a>persistentTier</td><td>
+      Flag indicating that the tier is used as non-volatile storage, e.g. PMem in
+ App Direct mode.
+   <br>
+</td>
+</tr>
+</table>
+<br>
+<a style="margin-bottom:10px; margin-top:10px; cursor:hand; cursor:pointer" onclick="resize_textarea('wsdl-textarea');expandcontent(this, 'wsdl-div')">Show WSDL type definition</a>
+<div class="switchcontent" id="wsdl-div">
+<textarea cols="20" rows="10" name="wsdl-textarea" wrap="off" readonly="1" id="wsdl-textarea">         <simpleType xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vim25="urn:vim25" name="HostMemoryTierFlags">
+            <restriction base="xsd:string">
+               <enumeration value="memoryTier"/>
+               <enumeration value="persistentTier"/>
+               <enumeration value="cachingTier"/>
+            </restriction>
+         </simpleType></textarea>
+</div>
+<br>
+<br>
+<table cellspacing="0" class="header-footer" id="bottom">
+<tr>
+<td><a href="#top">Top of page</a></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td><a href="index-mo_types.html">Managed Object Types</a></td><td><a href="index-do_types.html">Data Object Types</a></td><td><a href="index-properties.html">All Properties</a></td><td><a href="index-methods.html">All Methods</a></td>
+</tr>
+</table>
+<br>
+<script language="javascript">document.write(ID_Copyright);</script>
+<br>
+<script language="javascript">document.write(ID_VersionInformation);</script>
+</body>
+</html>
